@@ -2,15 +2,34 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.javafx26.HelloController">
+<VBox alignment="CENTER" prefHeight="545.0" prefWidth="707.0" spacing="20.0" style="-fx-background-color: lightblue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.example.javafx26.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <Pane prefHeight="539.0" prefWidth="666.0">
+      <children>
+         <Circle fill="#ffb21f" layoutX="605.0" layoutY="80.0" radius="34.0" stroke="#ffb21f" strokeType="INSIDE" />
+         <Ellipse fill="#f5f7fa" layoutX="115.0" layoutY="61.0" opacity="0.65" radiusX="69.0" radiusY="34.0" stroke="#fffefe" strokeType="INSIDE" />
+         <Ellipse fill="#f5f7fa" layoutX="177.0" layoutY="48.0" opacity="0.65" radiusX="69.0" radiusY="34.0" stroke="#fffefe" strokeType="INSIDE" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e8d28" height="141.0" layoutX="-26.0" layoutY="387.0" stroke="#0e8d28" strokeType="INSIDE" width="713.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1a254" height="236.0" layoutX="148.0" layoutY="195.0" stroke="#e1a254" strokeType="INSIDE" width="391.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#945f2d" height="82.0" layoutX="312.0" layoutY="349.0" stroke="#945f2d" strokeType="INSIDE" width="79.0" />
+         <Circle fill="#ffc621" layoutX="382.0" layoutY="393.0" radius="5.0" stroke="#ffc621" strokeType="INSIDE" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#73aee4" height="68.0" layoutX="425.0" layoutY="223.0" stroke="#2d67a6" strokeType="INSIDE" strokeWidth="3.0" width="94.0" />
+         <Line endX="91.0" layoutX="425.0" layoutY="256.0" startX="4.0" stroke="#2d67a6" />
+         <Line endX="40.0" endY="-38.0" layoutX="431.0" layoutY="266.0" startX="40.0" startY="25.0" stroke="#2d67a6" />
+         <Polyline fill="#b94e3e" layoutX="188.0" layoutY="235.0" points="-50.0, -40.0, 362.0, -40.0, 152.0, -186.0, -50.0, -40.0" stroke="#b94e3e" strokeType="INSIDE" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#946c35" height="94.0" layoutX="321.0" layoutY="433.0" opacity="0.77" stroke="#946c35" strokeType="INSIDE" strokeWidth="2.0" width="57.0" />
+      </children>
+   </Pane>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
 </VBox>
