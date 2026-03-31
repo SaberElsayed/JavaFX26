@@ -51,6 +51,7 @@ public class lec11_images extends Application {
 //        primaryStage.setScene(scene);
 //        primaryStage.show();
 
+        //---------------- GridPane- example #1 ----
         GridPane pane = new GridPane();
         pane.setAlignment(Pos.CENTER);
         pane.setPadding(new Insets(10, 10, 10, 10));
