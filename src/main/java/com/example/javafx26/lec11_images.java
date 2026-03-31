@@ -19,6 +19,8 @@ public class lec11_images extends Application {
         launch(args);
     }
     public void start(Stage primaryStage) {
+
+        //---------------- Image
 //        Pane pane = new Pane();
 //        pane.setStyle("-fx-background-color: warmwhite;");
 //
@@ -33,7 +35,7 @@ public class lec11_images extends Application {
 //
 //        imageView.setRotate(-90);
 //        pane.getChildren().add(imageView);
-
+ //------------------ FlowPane
 //        FlowPane pane = new FlowPane();
 //        pane.setPadding(new Insets(5,5,5,5));
 ////        pane.setAlignment(Pos.CENTER);
