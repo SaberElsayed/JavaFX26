@@ -7,6 +7,8 @@ package com.example.javafx26;
  * @version: 1.0
  */
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -18,6 +20,7 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 public class JavaFXPracticeShapes extends Application {
 
@@ -108,12 +111,12 @@ public class JavaFXPracticeShapes extends Application {
         // SUN (circle):center: 420, 90; Radius= 40; color: orange
 
         Circle sun = new  Circle(420, 90, 40);
-        sun.setFill(Color.ORANGE);
+//        sun.setFill(Color.ORANGE);
         // to change the sun to a moon
-//        sun.setFill(Color.WHITE);
-//
-//        Circle c2= new Circle(410,90,40);
-//        c2.setFill(Color.LIGHTBLUE);
+        sun.setFill(Color.WHITE);
+
+        Circle c2= new Circle(410,90,40);
+        c2.setFill(Color.LIGHTBLUE);
 
 
 
@@ -140,6 +143,28 @@ public class JavaFXPracticeShapes extends Application {
         pane.getChildren().addAll(button, button2, text, line, grass,
                 wall, window, wLin1, wLin2, door, sun, doorknob,cloud1, cloud2, roof);
 
+
+
+        pane.setStyle("-fx-background-color: Navy;");
+        Circle [] circleArray = new Circle[1000];
+        for (int i = 0; i < circleArray.length; i++) {
+            circleArray[i] = new Circle(Math.random()*500, Math.random()*500, 0.5);
+            circleArray[i].setFill(Color.WHITE);
+            circleArray[i].setOpacity(0.5);
+            pane.getChildren().add(circleArray[i]);
+        }
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(10), e->{
+            for(int i=0; i<circleArray.length;i++){
+                circleArray[i].setCenterY(circleArray[i].getCenterY()+1);
+
+                if(circleArray[i].getCenterY()>500){
+                    circleArray[i].setCenterY(0);
+                }
+            }
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
 
         // create the Scene
         Scene scene = new Scene(pane, 500, 500);
